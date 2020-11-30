@@ -1,2 +1,2 @@
-# ReacJSt_website
+# ReactJS_website
 Criação de um website utilizando ReactJS
