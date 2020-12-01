@@ -1,0 +1,16 @@
+{
+  "name": "ReactJS_website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "repository": "git@github.com:PeuDevBr/ReactJS_website.git",
+  "author": "Flávio Renato <peudevbr@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^10.0.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
