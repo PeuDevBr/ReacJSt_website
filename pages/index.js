@@ -4,21 +4,24 @@ function Home() {
   return (
     <div>
       <h1>Home</h1>
-      <Contador/>
+      <Logo/>
     </div>
   )
 }
 
-function Contador() {
-  const [contador, setContador] = useState(1);
+function Logo() {
+  const [search, setSearch] = useState("");  
 
-  function adicionarContador() {
-    setContador(contador + 1);
+  function searchProduct() {
+    let searchInput= document.getElementById("searchFor").value
+    setSearch(searchInput);
   }
   return (
     <div>
-      <div>{contador}</div>
-      <button onClick={adicionarContador}>Adicionar</button>
+      <input id="searchFor" type="text" placeholder="Pesquise aqui o seu produto..."/>
+      <button onClick={searchProduct}>Pesquisar</button>
+      <br/><br/><br/>
+      <div>Resultado: {search}</div>
     </div>
   )
 }
