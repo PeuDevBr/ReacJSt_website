@@ -1,0 +1,81 @@
+:root {
+  /*vaviáveis no CSS */
+  --color-background: #FFFFFF;
+  --color-primary-lighter: #9871F5;
+  --color-primary-light: #1D4988;
+  --color-primary: #8257E5;
+  --color-primary-dark: #F36B21;
+  --color-primary-darker: #bd4505;
+  --color-secondary: #04D361;
+  --color-secondary-dark: #039c48;
+  --color-title-in-primary: #FFFFFF;
+  --color-text-in-primary: #D4C2FF;
+  --color-text-title: #32264D;
+  --color-text-complement: #9C98A6;
+  --color-text-base: #6A6180;
+  --color-line-in-white: #E6E6F0;
+  --color-input-background: #F8F8FC;
+  --color-button-text: #FFFFFF;
+  --color-box-base: #FFFFFF;
+  --color-box-footer: #FAFAFC;
+  --color-small-info: #C1BCCC;
+  /* tamanho da fonte padrão: 16px - 100% - 1rem */
+  font-size: 60%; /* controle das medidas rem */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.searchContainer {
+  background: var(--color-secondary-dark);
+  grid-area: logoArea;
+  /*display: flex;*/
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2.4rem;
+  color: white;
+  text-decoration: none;
+  justify-content: center;
+  display: flex;
+  padding: 0.6rem;
+}
+
+.searchFor {
+  display: flex;
+  justify-content: center;
+  padding: 0.6rem;
+}
+
+#searchButton {
+  border-radius: 0.4rem;
+  border: none;
+  margin-left: 0.6rem;
+  background: var(--color-primary-dark);
+  color: white;
+  height: 2.8rem;
+}
+
+#searchInput {
+  width: 15rem;
+  border-radius: 0.4rem;
+  border: none;
+}
+
+body {
+  background-color: white !important ;
+}
+
+.head {
+  color: red !important;
+  font-size: 30px;
+}
+
+.sub {
+  color: yellow !important;
+}
