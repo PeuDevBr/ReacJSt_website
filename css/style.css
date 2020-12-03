@@ -25,11 +25,9 @@
 }
 
 html, body {
-  margin: 0;
+  margin: auto;
   padding: 0;
   background: var(--color-line-in-white);
-  margin-left: auto;
-  margin-right: auto;
 }
 
 
@@ -99,7 +97,7 @@ html, body {
   width: 9.2rem;
   color: var(--color-title-in-primary);
   border-radius: 0.6rem;
-  font-size: 2.4rem;
+  font-size: 2rem;
   text-decoration: none;
   padding: 0.6rem;
   margin: 0.4rem 1.4rem;

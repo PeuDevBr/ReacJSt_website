@@ -117,10 +117,6 @@ function MenuBar() {
       <a href="#">
         Split
       </a>
-      <a href="#">
-        {tipo[0]}
-      </a>
-
 
     </div>
   )
