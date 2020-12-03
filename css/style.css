@@ -19,6 +19,7 @@
   --color-box-base: #FFFFFF;
   --color-box-footer: #FAFAFC;
   --color-small-info: #C1BCCC;
+  --color-border-line: #dad5e4;
   /* tamanho da fonte padrão: 16px - 100% - 1rem */
   font-size: 60%; /* controle das medidas rem */
 }
@@ -158,4 +159,57 @@ html, body {
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
+}
+
+.productHeader div * {
+  display: block;
+  margin: 0.2rem 1rem;
+}
+
+.productHeader div strong {
+ font-size: 1.4rem;
+}
+
+.productConteiner span {
+  color: var(--color-text-base);
+}
+
+.footerContainer {
+  border-top: 1px solid var(--color-border-line);;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+.productConteiner footer p {
+  font-size: 1.2rem;
+  color: var(--color-text-complement);
+}
+
+.productConteiner footer p strong {
+  margin-left: 0.5rem;
+  font-size: 1.4rem;
+  color: var(--color-primary-dark);
+}
+
+.productConteiner footer button {
+  height: 2.5rem;
+  width: 8rem;
+  background: var(--color-secondary); 
+  color: var(--color-button-text); 
+  border: 0; 
+  border-radius: 0.8rem; 
+  cursor: pointer; 
+  font: 700 1.2rem Archivo; 
+  display: flex;
+  align-items: center; 
+  justify-content: space-evenly; 
+  text-decoration: none; 
+  transition: background 0.4s; 
+  outline: none;
+}
+
+.productConteiner footer button:hover {
+  background: var(--color-secondary-dark);
 }

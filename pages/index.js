@@ -145,7 +145,7 @@ function ProductContainer() {
 
         </header>
                       
-        <footer>
+        <footer className="footerContainer">
 
           <p>
             Preço<strong>{parts[0].cost}</strong>
