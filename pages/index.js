@@ -9,7 +9,7 @@ var parts = [
     code: "W10446925",
     brand: "Brastemp/Consul",
     subject: "Máquina de Lavar",
-    model: "Vários",
+    model: "BWC10AB, BWC10BB, BWC11AB",
     cost: "160,00",
     subName: "potencia",
 },
