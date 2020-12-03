@@ -73,9 +73,6 @@ function MenuBar() {
         Split
       </a>
       <a href="#">
-        Fogão
-      </a>
-      <a href="#">
         Bebedouro
       </a>
 

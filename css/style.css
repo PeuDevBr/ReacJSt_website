@@ -50,7 +50,7 @@ html, body {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  padding: 0.6rem;
+  padding: 0.4rem;
 }
 
 .searchForContainer {
@@ -65,7 +65,8 @@ html, body {
   margin-left: 0.6rem;
   background: var(--color-primary-dark);
   color: white;
-  height: 2.8rem;
+  height: 3.4rem;
+  font-size: 1.8rem;
   transition: background 0.4s;
   outline: none;
 }
@@ -74,7 +75,7 @@ html, body {
 }
 
 #searchInput {
-  width: 15rem;
+  width: 22rem;
   border-radius: 0.4rem;
   border: none;
   outline: none;
@@ -92,7 +93,7 @@ html, body {
   width: 3.8rem;
   color: var(--color-title-in-primary);
   border-radius: 0.6rem;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   text-decoration: none;
   padding: 0.6rem;
   margin: 0.4rem 1rem;
@@ -111,6 +112,8 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
 }
 
 .menuContainer a {
@@ -118,10 +121,10 @@ html, body {
   width: 4.8rem;
   color: var(--color-title-in-primary);
   border-radius: 0.6rem;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   text-decoration: none;
   padding: 0.6rem;
-  margin: 0.4rem 1rem;
+  margin: 0.4rem 0.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
