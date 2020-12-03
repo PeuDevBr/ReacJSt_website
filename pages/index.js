@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-
+var tipo = ['Climatizador']
 
 function Home() {
   return (
@@ -73,7 +73,7 @@ function MenuBar() {
         Split
       </a>
       <a href="#">
-        Bebedouro
+        {tipo[0]}
       </a>
 
     </div>
