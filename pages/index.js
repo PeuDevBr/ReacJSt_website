@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 
+
 function Home() {
   return (
     <div className="container">
@@ -10,24 +11,27 @@ function Home() {
 }
 
 function SearchBar() {
-  const [search, setSearch] = useState(""); 
+  const [search, setSearch] = useState("");   
 
   function searchProduct() {
-    let searchInput= document.getElementById("searchFor").value
+    let searchInput= document.getElementById("searchInput").value
 
     setSearch(searchInput);
   }
+  
   return (
     <div className="searchContainer">
 
-      <a className="logo" href="#">Servibras</a>
+      <div className="logoContainer">
+        <a className="logo" href="#">Servibras</a>
+      </div>      
 
-      <div className="searchFor">
+      <div className="searchForContainer">
         <input id="searchInput" type="text" placeholder="Busque o seu produto"/>
         <button id="searchButton" onClick={searchProduct}>Pesquisar</button>
       </div>
 
-      {/*<div>Resultado: {search}</div>*/}
+      <div>{search}</div>
     </div>
   )
 }

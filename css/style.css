@@ -36,17 +36,26 @@ html, body {
   justify-content: space-between;
   align-items: center;
 }
-
-.logo {
-  font-size: 2.4rem;
-  color: white;
-  text-decoration: none;
-  justify-content: center;
+.logoContainer {
   display: flex;
+  justify-content: center;
+  padding-top: 0.4rem;
+}
+
+a {
+  height: 2.6rem;
+  width: 9rem;
+  color: var(--color-title-in-primary);
+  border: 1px solid var(--color-title-in-primary);
+  border-radius: 0.6rem;
+  font-size: 2.4rem;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   padding: 0.6rem;
 }
 
-.searchFor {
+.searchForContainer {
   display: flex;
   justify-content: center;
   padding: 0.6rem;
@@ -59,12 +68,18 @@ html, body {
   background: var(--color-primary-dark);
   color: white;
   height: 2.8rem;
+  transition: background 0.4s;
+  outline: none;
+}
+#searchButton:hover {
+  background: var(--color-primary-darker);
 }
 
 #searchInput {
   width: 15rem;
   border-radius: 0.4rem;
   border: none;
+  outline: none;
 }
 
 body {
