@@ -26,6 +26,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  background: var(--color-line-in-white);
 }
 
 
@@ -137,17 +138,24 @@ html, body {
   background: var(--color-text-base);
 }
 
+.productConteiner {
+  height: 26rem;
+  width: 18rem;
+  border-radius: 0.6rem;
+  background: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
 
-
-body {
-  background-color: white !important ;
 }
 
-.head {
-  color: red !important;
-  font-size: 30px;
-}
+.productConteiner .productImage {
+  height: 12rem;
+  width: 12rem;
+  display: block;
 
-.sub {
-  color: yellow !important;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
 }
