@@ -6,6 +6,8 @@ function Home() {
   return (
     <div className="container">
       <SearchBar/>
+      <NavBar/>
+      <MenuBar/>
     </div>
   )
 }
@@ -23,7 +25,7 @@ function SearchBar() {
     <div className="searchContainer">
 
       <div className="logoContainer">
-        <a className="logo" href="#">Servibras</a>
+        <a href="/about">Servibras</a>
       </div>      
 
       <div className="searchForContainer">
@@ -32,6 +34,51 @@ function SearchBar() {
       </div>
 
       <div>{search}</div>
+    </div>
+  )
+}
+
+function NavBar() {
+  return (
+    <div className="navContainer">
+
+      <a href="#">
+        Serviços
+      </a>
+      <a href="#">
+        Peças
+      </a>
+      <a href="#">
+        Contatos
+      </a>
+
+    </div>
+  )
+}
+
+function MenuBar() {
+  return (
+    <div className="menuContainer">
+
+      <a href="#">
+        Lavadoras
+      </a>
+      <a href="#">
+        Refrigerdor
+      </a>
+      <a href="#">
+        Freezer
+      </a>
+      <a href="#">
+        Split
+      </a>
+      <a href="#">
+        Fogão
+      </a>
+      <a href="#">
+        Bebedouro
+      </a>
+
     </div>
   )
 }
