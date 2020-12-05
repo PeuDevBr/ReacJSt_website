@@ -88,7 +88,7 @@ html, body {
 .navContainer {
   background: var(--color-primary-dark);
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
