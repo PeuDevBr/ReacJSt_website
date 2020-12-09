@@ -1202,7 +1202,7 @@ class App extends Component {
         <Search handleSubmit={this.handleSubmit}/>
         <NavBar/>
         <MenuBar/>
-        <ProductContainer parts={this.SearchParts(this.state.searchPiece)}/>
+        <ProductContainer parts={parts}/>
       </div>
     )
   }
@@ -1210,3 +1210,5 @@ class App extends Component {
 
 
 export default App
+
+//<ProductContainer parts={this.SearchParts(this.state.searchPiece)}/>
