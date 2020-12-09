@@ -1,4 +1,4 @@
-/*function ProductContainer({parts}) {
+function ProductContainer({parts}) {
   
   const content = parts.map((parts) =>
 
@@ -43,4 +43,4 @@
   );
 }
 
-export default ProductContainer*/
+export default ProductContainer
