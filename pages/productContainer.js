@@ -1,20 +1,20 @@
-function ProductContainer({parts}) {
+function ProductContainer(prop) {
   
-  const content = parts.map((parts) =>
+  const content = prop.parts.map((part) =>
 
-    <div key={parts.code}>
+    <div key={part.code}>
 
       <article className="productConteiner">
 
         <header className="productHeader">
   
-          <img className="productImage" src={parts.avatar} alt=""/>
+          <img className="productImage" src={part.avatar} alt=""/>
 
           <div>
-            <strong>{parts.name}</strong>
-            <span> Código: {parts.code}</span>
-            <span>Marca: {parts.brand}</span>
-            <span>Modelo: {parts.model}</span>
+            <strong>{part.name}</strong>
+            <span> Código: {part.code}</span>
+            <span>Marca: {part.brand}</span>
+            <span>Modelo: {part.model}</span>
           </div>
 
         </header>
@@ -22,7 +22,7 @@ function ProductContainer({parts}) {
         <footer className="footerContainer">
 
           <p>
-            Preço<strong>{parts.cost}</strong>
+            Preço<strong>{part.cost}</strong>
           </p>
 
           <button type="button">  
