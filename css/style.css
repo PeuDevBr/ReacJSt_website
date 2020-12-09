@@ -65,11 +65,12 @@ html, body {
 #searchButton {
   border-radius: 0.4rem;
   border: none;
-  margin-left: -9.8rem;
+  margin-left: -8.2rem;
+  display: inline;
   background: var(--color-primary-dark);
   color: white;
-  height: 3.0rem;
-  font-size: 1.8rem;
+  height: 2.6rem;
+  font-size: 1.5rem;
   transition: background 0.4s;
   outline: none;
 }
@@ -79,9 +80,10 @@ html, body {
 
 #searchInput {
   width: 32rem;
-  height: 3.4rem;
+  height: 3.8rem;
   border-radius: 0.4rem;
   border: none;
+  outline: none;
   outline: none;
 }
 

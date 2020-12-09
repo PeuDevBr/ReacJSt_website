@@ -1,6 +1,6 @@
-function ProductContainer(props) {
+function ProductContainer({parts}) {
   
-  const content = props.parts.map((parts) =>
+  const content = parts.map((parts) =>
 
     <div key={parts.code}>
 

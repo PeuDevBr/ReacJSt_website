@@ -1,16 +1,5 @@
-import { useState } from 'react';
-
-function SearchBar() {
-  const [search, setSearch] = useState("");   
-
-  function searchProduct() {
-    let searchInput= document.getElementById("searchInput").value
-
-    setSearch(searchInput);
-  }
-  
-  
-  return (
+const Search = ({handleSubmit}) => ( 
+    
     <div className="searchContainer">
 
       <div className="logoContainer">
@@ -18,12 +7,22 @@ function SearchBar() {
       </div>      
 
       <div className="searchForContainer">
-        <input id="searchInput" type="text" placeholder="Busque o seu produto"/>
-        <button id="searchButton" onClick={searchProduct}>Pesquisar</button>
+        <form onSubmit={handleSubmit}>
+          <input 
+            id="searchInput"
+            type="text" 
+            name="search"
+            placeholder="Busque o seu produto"          
+          />
+          <button type='submit'id="searchButton">
+            Pesquisar
+          </button>
+        </form>
       </div>
 
     </div>
-  )
-}
 
-export default SearchBar
+)
+
+
+export default Search
