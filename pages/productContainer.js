@@ -1,4 +1,4 @@
-function ProductContainer({parts}) {
+/*function ProductContainer({parts}) {
   
   const content = parts.map((parts) =>
 
@@ -7,7 +7,7 @@ function ProductContainer({parts}) {
       <article className="productConteiner">
 
         <header className="productHeader">
-
+  
           <img className="productImage" src={parts.avatar} alt=""/>
 
           <div>
@@ -43,4 +43,4 @@ function ProductContainer({parts}) {
   );
 }
 
-export default ProductContainer
+export default ProductContainer*/

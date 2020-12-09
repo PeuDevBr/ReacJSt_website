@@ -1204,7 +1204,7 @@ class App extends Component {
         <Search handleSubmit={this.handleSubmit}/>
         <NavBar/>
         <MenuBar/>
-        <ProductContainer parts={this.SearchParts(this.state.searchPiece)}/>
+        {/*<ProductContainer parts={this.SearchParts(this.state.searchPiece)}/>*/}
       </div>
     )
   }
