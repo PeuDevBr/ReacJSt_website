@@ -1,7 +1,11 @@
-import { useState } from 'react';
+import React, {Component} from 'react'
 
+import NavBar from './navBar'
+import MenuBar from './menuBar'
+import ProductContainer from './productContainer'
+import Search from './searchBar'
 
-const parts = [
+var parts = [
   {
       name: "Placa Potência 220V",
       avatar: "https://th.bing.com/th/id/OIP.nW16fVygLmQddZvdgJ0rQwHaHa?w=199&h=199&c=7&o=5&pid=1.7",
@@ -860,7 +864,7 @@ const parts = [
       subject: "Refrigerador",
       model: "Vários",
       cost: "30,00",
-      subName: "",
+      subName: "União 5/16 Uniao 5/16",
   },
   {
       name: "Resistência Atacama 220V",
@@ -1156,143 +1160,55 @@ const parts = [
 ]
 
 
-function Content(props) {
+class App extends Component {
+  constructor () {
+    super()
+    this.state = {
+      searchPiece: ""
+    }
+  }
+  
+  handleSubmit = (e) => {
+    e.preventDefault()
+    const value = e.target.search.value
+    this.setState({
+      searchPiece: value
+    })
+  } 
 
-  const [search, setSearch] = useState("");   
+  SearchParts(piece) {
+    piece = piece.toUpperCase()
+    let searchList = []
 
-  let searchList = []
-    
-  let searchParts = search
+      for (var index in parts) {
+          if (parts[index].name.toUpperCase().includes(piece) 
+          || parts[index].model.toUpperCase().includes(piece) 
+          || parts[index].code.toUpperCase().includes(piece)
+          || parts[index].brand.toUpperCase().includes(piece)
+          || parts[index].subject.toUpperCase().includes(piece)
+          || parts[index].subName.toUpperCase().includes(piece)) {
 
-  searchParts = searchParts.toUpperCase()
-
-      for (var slice in props.parts) {
-          if (props.parts[slice].name.toUpperCase().includes(searchParts) 
-          || props.parts[slice].model.toUpperCase().includes(searchParts) 
-          || props.parts[slice].code.toUpperCase().includes(searchParts)
-          || props.parts[slice].brand.toUpperCase().includes(searchParts)
-          || props.parts[slice].subject.toUpperCase().includes(searchParts)
-          || props.parts[slice].subName.toUpperCase().includes(searchParts)) {
-
-          searchList.push(props.parts[slice])
+          searchList.push(parts[index])
           }     
       }
-
-  function searchProduct() {
-    let searchInput= document.getElementById("searchInput").value
-
-    setSearch(searchInput);
+    
+    return searchList
   }
 
+  render() {
 
-
-  const content = searchList.map((parts) =>
-
-    <div key={parts.code}>
-
-      <article className="productConteiner">
-
-        <header className="productHeader">
-
-          <img className="productImage" src={parts.avatar} alt=""/>
-
-          <div>
-            <strong>{parts.name}</strong>
-            <span> Código: {parts.code}</span>
-            <span>Marca: {parts.brand}</span>
-            <span>Modelo: {parts.model}</span>
-          </div>
-
-        </header>
-                      
-        <footer className="footerContainer">
-
-          <p>
-            Preço<strong>{parts.cost}</strong>
-          </p>
-
-          <button type="button">  
-            <img src="" alt=""/>
-            Comprar
-          </button>
-
-        </footer>
-
-      </article>
-
-    </div>
-  );
-
-  return (
-
-    <div className="container">
-
-
-      <div className="searchContainer">
-
-      <div className="logoContainer">
-        <a href="/about">Servibras</a>
-      </div>      
-
-      <div className="searchForContainer">
-        <input id="searchInput" type="text" placeholder="Busque o seu produto"/>
-        <button id="searchButton" onClick={searchProduct}>Pesquisar</button>
-      </div>
-
-      </div>
-
-
-      <div className="navContainer">
-
-        <a href="#">
-          Serviços
-        </a>
-        <a href="#">
-          Peças
-        </a>
-        <a href="#">
-          Contatos
-        </a>
-
-      </div>
-
-
-      <div className="menuContainer">
-
-        <a href="#">
-          Lavadora
-        </a>
-        <a href="#">
-          Refrigerdor
-        </a>
-        <a href="#">
-          Freezer
-        </a>
-        <a href="#">
-          Split
-        </a>
-
-      </div>
-
-
+    return (
       <div>
-        {content}
+        <Search handleSubmit={this.handleSubmit}/>
+        <NavBar/>
+        <MenuBar/>
+        <ProductContainer parts={parts}/>
       </div>
-
-
-    </div>
-
-
-
-  )
+    )
+  }
 }
 
-function Home() {
-  return (
-    <div>
-      <Content parts={parts}/>
-    </div>
-  )
-}
 
-export default Home
+export default App
+
+//<ProductContainer parts={this.SearchParts(this.state.searchPiece)}/>
