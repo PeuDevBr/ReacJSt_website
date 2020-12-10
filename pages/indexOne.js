@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 
 import NavBar from './navBar'
 import MenuBar from './menuBar'
-import ProductContainer from './productContainer'
 import Search from './searchBar'
 
 var parts = [
