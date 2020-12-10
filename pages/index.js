@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import NavBar from './navBar'
 import MenuBar from './menuBar'
 import Search from './searchBar'
+import Show from './show'
 
 const parts = [
   {
@@ -57,52 +58,6 @@ const parts = [
   }
 ]
 
-function Show() {
-
-  const showProduct = parts.map((parts) =>
-  
-    <div key={parts.code}>
-  
-      <article className="productConteiner">
-  
-          <header className="productHeader">
-  
-          <img className="productImage" src={parts.avatar} alt=""/>
-  
-          <div>
-              <strong>{parts.name}</strong>
-              <span> Código: {parts.code}</span>
-              <span>Marca: {parts.brand}</span>
-              <span>Modelo: {parts.model}</span>
-          </div>
-  
-          </header>
-                          
-          <footer className="footerContainer">
-  
-          <p>
-                  Preço<strong>{parts.cost}</strong>
-              </p>
-  
-          <button type="button">  
-              <img src="" alt=""/>
-              Comprar
-          </button>
-  
-          </footer>
-  
-      </article>
-  
-    </div>
-  );
-
-  return (
-    <div className="container">
-      {showProduct}      
-    </div>
-  )
-}
-
 function Home() {
 
   return (
@@ -110,7 +65,7 @@ function Home() {
       <Search />
       <NavBar/>
       <MenuBar/>
-      <Show/>
+      <Show parts={parts}/>
     </div>
   )
 }
