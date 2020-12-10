@@ -2,9 +2,8 @@ import { useState } from 'react';
 import NavBar from './navBar'
 import MenuBar from './menuBar'
 import Search from './searchBar'
-import parts from './dbBrastemp'
 
-/*
+
 const parts = [
   {
       name: "Placa Potência 220V",
@@ -1158,7 +1157,7 @@ const parts = [
   }
   
 ]
-*/
+
 
 function Content(props) {
 
