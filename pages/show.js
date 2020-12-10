@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Show(parts) {
+function Show({parts}) {
 
   const showProduct = parts.map((parts) =>
   
