@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Show({parts}) {
+  const [search, setSearch] = useState([...parts]);
+    
 
-  const showProduct = parts.map((parts) =>
+  console.log(search.length)
+
+  const showProduct = search.map((parts) =>
   
     <div key={parts.code}>
   
