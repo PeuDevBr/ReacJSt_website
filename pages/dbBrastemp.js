@@ -1,10 +1,3 @@
-import { useState } from 'react';
-import NavBar from './navBar'
-import MenuBar from './menuBar'
-import Search from './searchBar'
-import parts from './dbBrastemp'
-
-/*
 const parts = [
   {
       name: "Placa Potência 220V",
@@ -1145,7 +1138,7 @@ const parts = [
       model: "CRM39AB, CRM39AK",
       cost: "160,00",
       subName: "",
-  },
+  }/*,
   {
       name: "",
       avatar: "",
@@ -1155,143 +1148,8 @@ const parts = [
       model: "Vários",
       cost: "",
       subName: "",
-  }
+  }*/
   
 ]
-*/
 
-function Content(props) {
-
-  const [search, setSearch] = useState("");   
-
-  let searchList = []
-    
-  let searchParts = search
-
-  searchParts = searchParts.toUpperCase()
-
-      for (var slice in props.parts) {
-          if (props.parts[slice].name.toUpperCase().includes(searchParts) 
-          || props.parts[slice].model.toUpperCase().includes(searchParts) 
-          || props.parts[slice].code.toUpperCase().includes(searchParts)
-          || props.parts[slice].brand.toUpperCase().includes(searchParts)
-          || props.parts[slice].subject.toUpperCase().includes(searchParts)
-          || props.parts[slice].subName.toUpperCase().includes(searchParts)) {
-
-          searchList.push(props.parts[slice])
-          }     
-      }
-
-  function searchProduct() {
-    let searchInput= document.getElementById("searchInput").value
-
-    setSearch(searchInput);
-  }
-
-
-    
-    const showProduct = searchList.map((parts) =>
-
-        <div key={parts.code}>
-
-        <article className="productConteiner">
-
-            <header className="productHeader">
-
-            <img className="productImage" src={parts.avatar} alt=""/>
-
-            <div>
-                <strong>{parts.name}</strong>
-                <span> Código: {parts.code}</span>
-                <span>Marca: {parts.brand}</span>
-                <span>Modelo: {parts.model}</span>
-            </div>
-
-            </header>
-                        
-            <footer className="footerContainer">
-
-            <p>
-                Preço<strong>{parts.cost}</strong>
-            </p>
-
-            <button type="button">  
-                <img src="" alt=""/>
-                Comprar
-            </button>
-
-            </footer>
-
-        </article>
-
-        </div>
-    );
-
-  return (
-
-    <div className="container">
-    {showProduct}
-    
-    </div>
-  )
-}
-
-function Home() {
-  return (
-    <div>
-          
-        <Search/>
-        <NavBar/>
-        <MenuBar/>
-        <Content parts={parts}/>
-    </div>
-  )
-}
-
-export default Home
-
-{/*
-        <div className="navContainer">
-
-            <a href="#">
-            Serviços
-            </a>
-            <a href="#">
-            Peças
-            </a>
-            <a href="#">
-            Contatos
-            </a>
-
-        </div>
-
-        
-        <div className="menuContainer">
-
-            <a href="#">
-            Lavadora
-            </a>
-            <a href="#">
-            Refrigerdor
-            </a>
-            <a href="#">
-            Freezer
-            </a>
-            <a href="#">
-            Split
-            </a>
-
-        </div> */}
-
-        {/* <div className="searchContainer">
-
-            <div className="logoContainer">
-                <a href="/about">Servibras</a>
-            </div>      
-
-            <div className="searchForContainer">
-                <input id="searchInput" type="text" placeholder="Busque o seu produto"/>
-                <button id="searchButton" onClick={searchProduct}>Pesquisar</button>
-            </div>
-
-        </div> */}
+export default parts
