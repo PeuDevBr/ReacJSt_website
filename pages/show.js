@@ -3,8 +3,7 @@ import React, { useState } from 'react'
 function Show({parts}) {
   const [search, setSearch] = useState([...parts]);
     
-
-  console.log(search.length)
+  console.log(search)
 
   const showProduct = search.map((parts) =>
   

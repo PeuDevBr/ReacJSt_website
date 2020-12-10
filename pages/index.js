@@ -59,13 +59,17 @@ const parts = [
 ]
 
 function Home() {
+  const [search, setSearch] = useState([...parts]);
+
+
+  console.log(search.length)
 
   return (
     <div>
       <Search />
       <NavBar/>
       <MenuBar/>
-      <Show parts={parts}/>
+      <Show parts={search}/>
     </div>
   )
 }
