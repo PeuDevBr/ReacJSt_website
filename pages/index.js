@@ -22,7 +22,7 @@ import { useState, Component } from 'react';
 
         return (
             <div>
-                <Array />
+                <Array number={6}/>
             </div>
            
         )

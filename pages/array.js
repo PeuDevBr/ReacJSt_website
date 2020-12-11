@@ -1,14 +1,22 @@
 import React from 'react'
 
-var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 
-const Array = () => {
+const Array = (props) => {
+  let newArray = []
+  for (var index in array) {
+    if (array[index] > props.number) {
+      newArray.push(array[index])
+
+    }
+  }
   
     return (
     <div>
        <h1> {
-              array.map((array) => (
-                array
+              newArray.map((array) => (
+                  array
+                
               ))
             }
         </h1>
