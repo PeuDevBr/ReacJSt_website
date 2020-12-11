@@ -1,12 +1,13 @@
 import React from 'react'
 
-var array = [1, 2, 3, 4, 5, 6, 7, 8]
-const Array = () => {
+
+
+const Array = (props) => {
   
     return (
     <div>
        <h1> {
-              array.map((array) => (
+              props.array.map((array) => (
                 array
               ))
             }
