@@ -1,33 +1,58 @@
-import { useState, Component } from 'react';
+import Menu from './menu'
+import NavBar from './navBar'
+import ShowContent from './showContent'
+import Search from './search'
 
-//import NavBar from './navBar'
-//import MenuBar from './menuBar'
-//import Search from './searchBar'
-  
-  import Array from './array'
+import { useState } from 'react';
 
-  class App extends Component {
-    constructor () {
-      super()
-      this.state = {
-        userinfo: null,
-        repos: [],
-        starred: [],
-        isFetching: false
-  
-      }
-    }
 
-    render() {
+function Home() {
 
-        return (
-            <div>
-                <Array number={6}/>
-            </div>
-           
-        )
-    }
+  const [searchPiece, setState] = useState("");
 
+
+  function handleSubmit (e)  {
+    e.preventDefault()
+    const value = e.target.search.value
+
+    setState(value)
+  } 
+
+  function handleFreezer () {
+    setState('Freezer')
   }
 
-  export default App
+  function handleWash () {
+    setState('Lavadora')
+  }
+
+  function handleRefrigerator () {
+    setState('Refrigerador')
+  }
+
+  function handleSplit () {
+    setState('Split')
+  }
+
+  function handleAll () {
+    setState('')
+  }
+  
+  
+
+  return (
+    <div className="container">
+      <Search handleSubmit={(e) => handleSubmit(e)}/>
+      <NavBar handleAll={handleAll}/> 
+      <Menu 
+        handleFreezer={handleFreezer}
+        handleWash={handleWash}
+        handleRefrigerator={handleRefrigerator}
+        handleSplit={handleSplit}
+      />
+      <ShowContent search={searchPiece}/>
+    </div>
+  )
+}
+
+export default Home

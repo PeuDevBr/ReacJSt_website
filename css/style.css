@@ -53,6 +53,7 @@ html, body {
   align-items: center;
   text-decoration: none;
   padding: 0.4rem;
+  cursor: pointer;
 }
 
 .searchForContainer {
@@ -107,6 +108,7 @@ html, body {
   justify-content: center;
   align-items: center;
   transition: background 0.4s;
+  cursor: pointer;
 }
 
 .navContainer a:hover {
@@ -135,6 +137,7 @@ html, body {
   justify-content: center;
   align-items: center;
   transition: background 0.4s;
+  cursor: pointer;
 }
 
 .menuContainer a:hover {
@@ -203,7 +206,7 @@ html, body {
   color: var(--color-primary-dark);
 }
 
-.productConteiner footer button {
+.productConteiner footer a {
   height: 2.5rem;
   width: 8rem;
   background: var(--color-secondary); 
@@ -220,6 +223,86 @@ html, body {
   outline: none;
 }
 
-.productConteiner footer button:hover {
+.productConteiner footer a:hover {
   background: var(--color-secondary-dark);
+}
+
+@media (min-width: 760px) { 
+  /*aumenta o tamanho da fonte para dispositivos com telas maiores que 699px */
+  @media (max-width: 1149px){
+    :root {
+        font-size: 70%;
+    }
+    .allProductContainer{ /* caixas de seleção e botão */
+      display: grid; 
+      grid-template-columns: repeat(2, 1fr); 
+      /* divide o grid em 4 colomas com 1fr de tamanho cada */
+      gap: 16px; /* espaçamento entre as colunas */
+      /*position: absolute;  absoluto em relação a página toda (aula 02 - 2:40) */ 
+      
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+  } 
+}
+
+@media (min-width: 1150px) { 
+  /*aumenta o tamanho da fonte para dispositivos com telas maiores que 699px */
+  @media (max-width: 1569px){
+    :root {
+        font-size: 70%;
+    }
+    .allProductContainer{ /* caixas de seleção e botão */
+      display: grid; 
+      grid-template-columns: repeat(3, 1fr); 
+      /* divide o grid em 4 colomas com 1fr de tamanho cada */
+      gap: 16px; /* espaçamento entre as colunas */
+      /*position: absolute;  absoluto em relação a página toda (aula 02 - 2:40) */ 
+      
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+  } 
+}
+
+@media (min-width: 1570px) { 
+  /*aumenta o tamanho da fonte para dispositivos com telas maiores que 699px */
+  @media (max-width: 1849px){
+    :root {
+        font-size: 70%;
+    }
+    .allProductContainer{ /* caixas de seleção e botão */
+      display: grid; 
+      grid-template-columns: repeat(4, 1fr); 
+      /* divide o grid em 4 colomas com 1fr de tamanho cada */
+      gap: 16px; /* espaçamento entre as colunas */
+      /*position: absolute;  absoluto em relação a página toda (aula 02 - 2:40) */ 
+      
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+  } 
+}
+
+@media (min-width: 1850px) { 
+  /*aumenta o tamanho da fonte para dispositivos com telas maiores que 699px */
+  
+    :root {
+        font-size: 70%;
+    }
+    .allProductContainer{ /* caixas de seleção e botão */
+      display: grid; 
+      grid-template-columns: repeat(5, 1fr); 
+      /* divide o grid em 4 colomas com 1fr de tamanho cada */
+      gap: 16px; /* espaçamento entre as colunas */
+      /*position: absolute;  absoluto em relação a página toda (aula 02 - 2:40) */ 
+      
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+  
 }
