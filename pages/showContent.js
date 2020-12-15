@@ -1422,10 +1422,21 @@ const parts = [
   
 ]
 
+import Search from './search'
+import { useState } from 'react';
 
-function ShowContent ({search}) {
+function ShowContent () {
+    const [searchPiece, setState] = useState("");
+
+    function handleSubmit (e)  {
+        e.preventDefault()
+        const value = e.target.search.value
+    
+        setState(value)
+      } 
+
   let searchList = []    
-  let searchParts = search
+  let searchParts = searchPiece
   searchParts = searchParts.toUpperCase()
 
       for (var slice in parts) {
@@ -1478,8 +1489,11 @@ function ShowContent ({search}) {
   );
 
   return (
-    <div className="allProductContainer">
-      {content}
+    <div>
+        <Search handleSubmit={(e) => handleSubmit(e)}/>
+        <div className="allProductContainer">
+            {content}
+        </div>
     </div>
   )
 }
